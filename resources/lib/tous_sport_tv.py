@@ -86,7 +86,7 @@ def showMovies():
     oRequestHandler = cRequestHandler(sUrl)
     sHtmlContent = oRequestHandler.request()
     
-    sPattern = '(?:<p class="Day">([^<>]+)</p>|)(?:<p class="active" style=".+?">([^<>]+)</p><span>.+?|)<span class="date">([^<>]+)</span><a href="([^"]+)" title=".+?" target="_blank">([^<>]+)(?:<span class="liens">|<i class=".+?">)'
+    sPattern = '(?:<p class="Day">([^<>]+)</p>|)(?:<p class="active" style=".+?">([^<>]+)</p><span>.+?|)<span class="date">([^<>]+)</span><a href="([^"]+)" title=".+?" onclick="ouvre_popup.+?">([^<>]+)(?:<span class="liens">|<i class=".+?">)'
 
     oParser = cParser()
     aResult = oParser.parse(sHtmlContent, sPattern)
